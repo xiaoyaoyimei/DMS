@@ -1,3 +1,5 @@
+公司DMS管理系统。参照http://admin-lte.dxracer.cn排版
+若侵权请联系删除。谢谢
 # dms
 
 > A Vue.js project
