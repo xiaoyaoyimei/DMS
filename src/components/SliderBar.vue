@@ -87,4 +87,7 @@
 	.el-menu-vertical-demo{
 		height: calc(100vh - 50px);
 	}
+	.el-menu i{
+	width:20px;
+	}
 </style>

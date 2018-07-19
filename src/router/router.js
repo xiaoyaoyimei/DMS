@@ -9,13 +9,13 @@ let routes = [
     {
         path: '/login',
         component:() => import('@/views/Login.vue'),
-        name: '',
+        name: '登录页',
         hidden: true
     },
     {
         path: '/404',
         component:() => import('@/views/404.vue'),
-        name: '',
+        name: '404',
         hidden: true
     },
     {
@@ -26,6 +26,16 @@ let routes = [
         leaf: true,//只有一个节点
         children: [
             { path: '/home',  component:() => import('@/views/home.vue'), name: '主页' }
+        ]
+    },
+       {
+        path: '/',
+        component: Full,
+        name: '产品',
+        iconCls: 'fa fa-product-hunt',//图标样式class
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/product',  component:() => import('@/views/product/Product.vue'), name: '产品中心' }
         ]
     },
     {
@@ -39,7 +49,7 @@ let routes = [
         ]
     },
 
- 
+
     {
         path: '*',
         hidden: true,
@@ -50,25 +60,4 @@ const router = new Router({
     routes
 });
 export default router;
-//export default new Router({
-//routes: [
-//  {
-//    path: '/',
-//    name: 'HelloWorld',
-//    component: HelloWorld
-//  },	
-//  {
-//			path: '/components',
-//			name:'/组件',
-//			redirect: '/components/elementtable',
-//			component: Index,
-//			children: [
-//				{
-//					name:'elementtable',
-//					path: 'elementtable',
-//					component: ElementTable
-//				}
-//				]
-//		}
-//]
-//})
+
